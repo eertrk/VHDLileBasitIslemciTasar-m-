@@ -2,11 +2,13 @@
 Bu kod Karadeniz Teknik Üniversitesi Bilgisayar Mühendisliği bölümü Donanım Tanımlama Dilleri dersinde verilen proje için yazılmıştır.
 # AYRINTILI TASARIM ACIKLAMASI
 •	Library anahtar kelimesiyle gerekli kütüphaneleri; use anahtar kelimesiyle gerekli paketleri import ediyoruz. 
+  
   library ieee;
   use ieee.std_logic_1164.all; -- Paketi gelişmiş sinyal türlerini import etmemizi sağlar.
   use IEEE.Numeric_Std.all; -- Sayısal hesaplamaları sağlar.
 
 •	Architecture kısmında işlemcide bulunan RAM ve REGİSTER tanımlarını yapıyoruz.
+  
   TYPE tMEM IS ARRAY(0 TO 63) OF std_logic_vector(n-1 DOWNTO 0); -- Her biri 8bitlik 64 hucreden olusan RAM
   SIGNAL Ram : tMEM;  -- tMEM dizisinde tanimli sinyal Ram
   TYPE tREG IS ARRAY(0 TO 15) OF std_logic_vector(n-1 DOWNTO 0); -- Her biri 8 bitlik 16 tane registerdan olusan register kumemiz
@@ -15,6 +17,7 @@ Bu kod Karadeniz Teknik Üniversitesi Bilgisayar Mühendisliği bölümü Donan�
 •	ALU yani Arithmetic Logic Unit devrede işlemciye aritmetik ve mantıksal işlemleri gerçekleyecek olan birim.
 
 •	Begin bölümünde işlemcimizin mimarisini tasarlıyoruz.
+
 If( Rising_edge(s) ) then -- Saatin yukselen kenari geldikten sonra
 Case Kmt(15 downto 12) is -- Komut girisinin en anlamli 4 bitine gore asagidaki islemleri yap
 “0000” -> null – işlem yapma 
