@@ -1,5 +1,4 @@
 -- Emirhan Ertürk 330129
--- DONANIM TANIMLAMA DILLERI VHDL PROJESI
 -- BASIT ISLEMCI TASARIMI
 --------------------------------------------------------------------------------
 
